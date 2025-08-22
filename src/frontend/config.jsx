@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ForgeReconciler, { useConfig, Box, Button, Label, Form, FormHeader, FormSection, FormFooter, RadioGroup, useForm, Spinner } from '@forge/react';
 import { view } from '@forge/bridge';
 
+
+const defaultConfig = {
+  cheese: "cheddar"
+}
+
 const CHEESES = [
     { name: "cheese", value: "brie", label: "Brie" },
     { name: "cheese", value: "cheddar", label: "Cheddar" },
@@ -37,7 +42,7 @@ const useSubmit = () => {
 
 const Config = () => {
   const {error, message, submit } = useSubmit();
-  const config = useConfig();
+  const config = useConfig() || defaultConfig;
   const { handleSubmit, register, getFieldId } = useForm({
   });
 

@@ -4,10 +4,16 @@
 
 This is an example [Forge](https://developer.atlassian.com/platform/forge/) app that inserts a Macro into a confluence page which allows the user to select a type of cheese, and displays an image of that cheese in the confluence page. 
 
+This app demonstrates how to use the following: 
+* Module(s): [Confluence Macro](https://developer.atlassian.com/platform/forge/manifest-reference/modules/macro/)
+* User Interface Type: UI Kit
+* [UI Components](https://developer.atlassian.com/platform/forge/ui-kit/components/): Form, RadioGroup, Spinner, Image, Button
+
+
 ## Usage
 
 Once the app has been installed, open a Confluence page and type /cheese to get started
-![TODO: Optionally include one or more images](./demo.gif)
+![Demo - Cheese Macro](./resources/cheese-macro.gif)
 
 ## Installation
 
