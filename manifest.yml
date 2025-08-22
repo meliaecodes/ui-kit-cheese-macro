@@ -1,0 +1,27 @@
+modules:
+  macro:
+    - key: cheese-confluence-ui-kit-custom-config-macro
+      resource: main
+      render: native
+      layout: inline
+      resolver:
+        function: resolver
+      title: Cheese
+      config:
+        resource: macro-config
+        render: native
+        title: Choose your cheese
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+  - key: macro-config
+    path: src/frontend/config.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+
